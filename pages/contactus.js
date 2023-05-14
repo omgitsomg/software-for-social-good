@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import styles from '../styles/ContactUs.module.css';
-import { Divider, Text, Image } from "@chakra-ui/react";
+import { Divider, Text } from "@chakra-ui/react";
+import Image from "next/image";
 
 export default function contactus()
 {
@@ -11,7 +12,7 @@ export default function contactus()
                 <Text className={styles.headingText}>Whether you are a business, non-profit, student,</Text>
                 <Text className={styles.headingText}>or a teacher, reach out to us for any questions!</Text>
                 <div className={styles.facultyCard}>
-                    <Image src='WilliamPic.jpg' boxSize="100px" />
+                    <Image src='/WilliamPic.jpg' width="150px" height="150px" alt="Picture of William Benton"/>
                     <div>
                         <Text className={styles.headingText} fontSize="2xl">William Benton</Text>
                         <Text className={styles.headingText}>wbenton@vcu.edu | Faculty</Text>
@@ -19,7 +20,7 @@ export default function contactus()
                 </div>
                 <Divider border="1px solid"/>
                 <div className={styles.facultyCard}>
-                    <Image src='LeonardPic.jpg' boxSize="100px"/>
+                    <Image src='/LeonardPic.jpg' width="150px" height="150px" alt="Picture of John Leonard"/>
                     <div>
                         <Text className={styles.headingText} fontSize="2xl">John Leonard</Text>
                         <Text className={styles.headingText}>jdleonard@vcu.edu | Faculty</Text>

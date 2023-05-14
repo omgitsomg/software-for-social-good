@@ -19,3 +19,28 @@
     font-size: 16px;
     color: #fbfbfb;
 }
+
+.linkGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.linkContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem
+}
+
+.linkText {
+    font-family: 'Be Vietnam Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fbfbfb;
+    margin-left: 0.3rem;
+    align-content: center;
+}
+

@@ -1,6 +1,6 @@
-import Image from "next/image";
-
 import styles from "../styles/CardMembers.module.css"
+import Image from "next/image";
+import Link from "next/link";
 
 const CardMembers = (props) => {
     return(
@@ -9,17 +9,18 @@ const CardMembers = (props) => {
             <p className={ styles.nameText }>{ props.name }</p>
             <p className={ styles.majorYearText }>{ props.major }</p>
             <p className={ styles.majorYearText }>{ props.graduationyear }</p>
-            <div>
-                <div style={{ marginBottom: 0.5 + "rem" }}>
-                    <img src="/ArrowRight.svg" alt="Arrow Right" style={{ marginRight: 1 + "rem" }}/>
-                    <a href={ props.linkedInURL }>LinkedIn</a>
+            <div className={styles.linkGroup}>
+                <div className={styles.linkContainer}>
+                    <Image src="/ArrowRight.svg" width="20px" height="20px" alt="Arrow Right" style={{ marginRight: 1 + "rem" }}/>
+                    <Link href={ props.linkedInURL }><a className={styles.linkText}>LinkedIn</a></Link>
                 </div>
                 {
                     (props.portfolioURL)
                     ?
-                    <div>
-                        <img src="/ArrowRight.svg" alt="Arrow Right" style={{ marginRight: 1 + "rem" }}/>
-                        <a href={ props.portfolioURL }>Portfolio</a>
+                    <div className={styles.linkContainer}>
+                        <Image src="/ArrowRight.svg" width="20px" height="20px" alt="Arrow Right" style={{ marginRight: 1 + "rem" }}/>
+                        <Link href={ props.portfolioURL }><a className={styles.linkText}>Portfolio</a></Link>
+                        
                     </div>
                     :
                     <div/>
